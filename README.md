@@ -105,7 +105,7 @@ Use these in Home Assistant automations under **Trigger → ESPHome → [event n
 
 The enclosure uses **6x3mm magnets** pressed into the lid and base for a snap-close fit — no screws needed.
 
-> Print settings and STL files are available on [MakerWorld](https://makerworld.com/).
+> Print settings and STL files are available on [MakerWorld](https://makerworld.com/en/models/2747778-habuttonpad-esp32-s3-home-assistant#profileId-3048094).
 
 ---
 
