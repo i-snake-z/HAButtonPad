@@ -45,7 +45,7 @@ The enclosure is fully 3D printed and uses **6x3mm magnets** for a clean, tool-f
 |---|-----------|-----|------|
 | 1 | **ESP32-S3 SuperMini** | 1 | [AliExpress](https://pt.aliexpress.com/item/1005009890133886.html?spm=a2g0o.order_list.order_list_main.5.36f11802cJK5be&gatewayAdapt=glo2bra) |
 | 2 | **Keyboard Switches** | 3 | [AliExpress](https://pt.aliexpress.com/item/1005008545427553.html?spm=a2g0o.order_list.order_list_main.136.36f11802cJK5be&gatewayAdapt=glo2bra) |
-| 3 | **Magnets 6x3mm** | 6 | [AliExpress](https://pt.aliexpress.com/item/1005009183404175.html?spm=a2g0o.order_list.order_list_main.176.36f11802cJK5be&gatewayAdapt=glo2bra) |
+| 3 | **Magnets 6x3mm** | 8 | [AliExpress](https://pt.aliexpress.com/item/1005009183404175.html?spm=a2g0o.order_list.order_list_main.176.36f11802cJK5be&gatewayAdapt=glo2bra) |
 | 4 | **3D Printed Enclosure** | 1 | [MakerWorld](https://makerworld.com/en/models/2747778-habuttonpad-esp32-s3-home-assistant#profileId-3048094) |
 
 ---
@@ -99,11 +99,50 @@ Button 2 - Single Tap
 
 Use these in Home Assistant automations under **Trigger → ESPHome → [event name]**.
 
+### Automation Files
+
+Two ready-to-use automation templates are included in this repository:
+
+| File | Description |
+|------|-------------|
+| `ha_button1_combined_automation.yaml` | One automation handling all 4 Button 1 actions (single, double, triple tap, hold) using `choose:` — recommended |
+| `ha_button1_separate_automations.yaml` | Separate automation per action — useful as a reference |
+
+To use: go to **Settings → Automations → New Automation → three dots → Edit as YAML**, paste the file content and replace the placeholder `entity_id` values with your own.
+
+**Example — one automation for all Button 1 actions:**
+```yaml
+alias: "HAButtonPad - Button 1"
+mode: single
+triggers:
+  - trigger: event
+    event_type: esphome.habuttonpad
+    event_data:
+      button: "1"
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'single_tap' }}"
+        sequence:
+          - action: light.toggle
+            target:
+              entity_id: light.your_light
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'double_tap' }}"
+        sequence:
+          - action: scene.turn_on
+            target:
+              entity_id: scene.your_scene
+```
+
 ---
 
 ## 3D Print
 
-The enclosure uses **6x3mm magnets** pressed into the lid and base for a snap-close fit — no screws needed.
+The enclosure uses **8× 6x3mm magnets** pressed into the lid and base for a snap-close fit — no screws needed.
 
 > Print settings and STL files are available on [MakerWorld](https://makerworld.com/en/models/2747778-habuttonpad-esp32-s3-home-assistant#profileId-3048094).
 

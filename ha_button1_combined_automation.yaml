@@ -1,0 +1,46 @@
+# HAButtonPad - Button 1 (all actions in one automation)
+# In Home Assistant go to Settings > Automations > New Automation > three dots > Edit as YAML
+# Paste this replacing all existing content in the editor
+
+alias: "HAButtonPad - Button 1"
+description: "Handles all Button 1 actions in one automation"
+mode: single
+triggers:
+  - trigger: event
+    event_type: esphome.habuttonpad
+    event_data:
+      button: "1"
+conditions: []
+actions:
+  - choose:
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'single_tap' }}"
+        sequence:
+          - action: light.toggle          # <-- change this
+            target:
+              entity_id: light.your_light # <-- change this
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'double_tap' }}"
+        sequence:
+          - action: scene.turn_on         # <-- change this
+            target:
+              entity_id: scene.your_scene # <-- change this
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'triple_tap' }}"
+        sequence:
+          - action: light.turn_off        # <-- change this
+            target:
+              entity_id: light.your_light # <-- change this
+
+      - conditions:
+          - condition: template
+            value_template: "{{ trigger.event.data.action == 'hold' }}"
+        sequence:
+          - action: scene.turn_on         # <-- change this
+            target:
+              entity_id: scene.your_scene # <-- change this
