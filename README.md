@@ -45,7 +45,7 @@ The enclosure is fully 3D printed and uses **6x3mm magnets** for a clean, tool-f
 |---|-----------|-----|------|
 | 1 | **ESP32-S3 SuperMini** | 1 | [AliExpress](https://pt.aliexpress.com/item/1005009890133886.html?spm=a2g0o.order_list.order_list_main.5.36f11802cJK5be&gatewayAdapt=glo2bra) |
 | 2 | **Keyboard Switches** | 3 | [AliExpress](https://pt.aliexpress.com/item/1005008545427553.html?spm=a2g0o.order_list.order_list_main.136.36f11802cJK5be&gatewayAdapt=glo2bra) |
-| 3 | **Magnets 6x3mm** | 8 | [AliExpress](https://pt.aliexpress.com/item/1005009183404175.html?spm=a2g0o.order_list.order_list_main.176.36f11802cJK5be&gatewayAdapt=glo2bra) |
+| 3 | **Magnets 6x3mm** *(optional)* | 8 | [AliExpress](https://pt.aliexpress.com/item/1005009183404175.html?spm=a2g0o.order_list.order_list_main.176.36f11802cJK5be&gatewayAdapt=glo2bra) |
 | 4 | **3D Printed Enclosure** | 1 | [MakerWorld](https://makerworld.com/en/models/2747778-habuttonpad-esp32-s3-home-assistant#profileId-3048094) |
 
 ---
@@ -142,7 +142,14 @@ actions:
 
 ## 3D Print
 
-The enclosure uses **8× 6x3mm magnets** pressed into the lid and base for a snap-close fit — no screws needed.
+Two lid attachment options are available:
+
+| Option | Description |
+|--------|-------------|
+| **Magnet version** | Uses **8× 6x3mm magnets** press-fit into the lid and base for a tool-free snap-close assembly |
+| **Cylinder version** | Includes a printable cylinder plug that can be glued in place — no magnets needed |
+
+Choose the option that works best for you. Both versions are available on MakerWorld.
 
 > Print settings and STL files are available on [MakerWorld](https://makerworld.com/en/models/2747778-habuttonpad-esp32-s3-home-assistant#profileId-3048094).
 
