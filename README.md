@@ -2,7 +2,7 @@
 
 > A compact, 3D printed wireless button controller for Home Assistant — built with ESPHome and the ESP32-S3 SuperMini.
 
-![Final Product](../Img/HAButtonPad_printed.png)
+![Final Product](Img/HAButtonPad_printed.png)
 
 ---
 
@@ -26,16 +26,16 @@ The enclosure is fully 3D printed and uses **6x3mm magnets** for a clean, tool-f
 ## Photos
 
 ### Final Product
-![HAButtonPad Final Product](../Img/HAButtonPad_printed.png)
+![HAButtonPad Final Product](Img/HAButtonPad_printed.png)
 
 ### Connections Inside the Enclosure
-![HAButtonPad Connections](../Img/HAButtonPad_connections.png)
+![HAButtonPad Connections](Img/HAButtonPad_connections.png)
 
 ### Wiring Diagram
-![ESP32-S3 Wiring Diagram](../Img/esp32S3_Diagram.png)
+![ESP32-S3 Wiring Diagram](Img/esp32S3_Diagram.png)
 
 ### Home Assistant Integration
-![Home Assistant](../Img/HomeAssistantPrint.png)
+![Home Assistant](Img/HomeAssistantPrint.png)
 
 ---
 
