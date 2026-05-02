@@ -1,0 +1,37 @@
+# HAButtonPad - Button 1 Automation Examples
+# In Home Assistant go to Settings > Automations > New Automation > three dots > Edit as YAML
+# Paste ONE automation at a time (replace all existing content in the editor)
+
+# --- SINGLE TAP ---
+alias: "HAButtonPad - Button 1 Single Tap"
+description: "Triggered when Button 1 is tapped once"
+mode: single
+triggers:
+  - trigger: event
+    event_type: esphome.habuttonpad
+    event_data:
+      button: "1"
+      action: "single_tap"
+conditions: []
+actions:
+  - action: light.toggle
+    target:
+      entity_id: light.your_light  # <-- change this
+
+---
+
+# --- DOUBLE TAP ---
+alias: "HAButtonPad - Button 1 Double Tap"
+description: "Triggered when Button 1 is tapped twice"
+mode: single
+triggers:
+  - trigger: event
+    event_type: esphome.habuttonpad
+    event_data:
+      button: "1"
+      action: "double_tap"
+conditions: []
+actions:
+  - action: scene.turn_on
+    target:
+      entity_id: scene.your_scene  # <-- change this
