@@ -13,14 +13,22 @@ binary_sensor:
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 1 - Single Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "1"
+                action: "single_tap"
       - timing:
           - ON for at most 350ms
           - OFF for at most 350ms
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 1 - Double Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "1"
+                action: "double_tap"
       - timing:
           - ON for at most 350ms
           - OFF for at most 350ms
@@ -29,11 +37,19 @@ binary_sensor:
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 1 - Triple Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "1"
+                action: "triple_tap"
       - timing:
           - ON for at least 500ms
         then:
-          - logger.log: "Button 1 - Hold"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "1"
+                action: "hold"
 
   - platform: gpio
     pin:
@@ -49,14 +65,22 @@ binary_sensor:
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 2 - Single Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "2"
+                action: "single_tap"
       - timing:
           - ON for at most 350ms
           - OFF for at most 350ms
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 2 - Double Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "2"
+                action: "double_tap"
       - timing:
           - ON for at most 350ms
           - OFF for at most 350ms
@@ -65,11 +89,19 @@ binary_sensor:
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 2 - Triple Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "2"
+                action: "triple_tap"
       - timing:
           - ON for at least 500ms
         then:
-          - logger.log: "Button 2 - Hold"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "2"
+                action: "hold"
 
   - platform: gpio
     pin:
@@ -85,14 +117,22 @@ binary_sensor:
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 3 - Single Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "3"
+                action: "single_tap"
       - timing:
           - ON for at most 350ms
           - OFF for at most 350ms
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 3 - Double Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "3"
+                action: "double_tap"
       - timing:
           - ON for at most 350ms
           - OFF for at most 350ms
@@ -101,8 +141,16 @@ binary_sensor:
           - ON for at most 350ms
           - OFF for at least 350ms
         then:
-          - logger.log: "Button 3 - Triple Tap"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "3"
+                action: "triple_tap"
       - timing:
           - ON for at least 500ms
         then:
-          - logger.log: "Button 3 - Hold"
+          - homeassistant.event:
+              event: esphome.habuttonpad
+              data:
+                button: "3"
+                action: "hold"
