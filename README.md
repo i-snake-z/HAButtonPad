@@ -46,7 +46,7 @@ The enclosure is fully 3D printed and uses **6x3mm magnets** for a clean, tool-f
 | 1 | **ESP32-S3 SuperMini** | 1 | [AliExpress](https://pt.aliexpress.com/item/1005009890133886.html?spm=a2g0o.order_list.order_list_main.5.36f11802cJK5be&gatewayAdapt=glo2bra) |
 | 2 | **Keyboard Switches** | 3 | [AliExpress](https://pt.aliexpress.com/item/1005008545427553.html?spm=a2g0o.order_list.order_list_main.136.36f11802cJK5be&gatewayAdapt=glo2bra) |
 | 3 | **Magnets 6x3mm** | 6 | [AliExpress](https://pt.aliexpress.com/item/1005009183404175.html?spm=a2g0o.order_list.order_list_main.176.36f11802cJK5be&gatewayAdapt=glo2bra) |
-| 4 | **3D Printed Enclosure** | 1 | [MakerWorld](https://makerworld.com/) |
+| 4 | **3D Printed Enclosure** | 1 | [MakerWorld](https://makerworld.com/en/models/2747778-habuttonpad-esp32-s3-home-assistant#profileId-3048094) |
 
 ---
 
