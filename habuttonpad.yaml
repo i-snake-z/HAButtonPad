@@ -1,0 +1,108 @@
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO7
+      mode:
+        input: true
+        pullup: true
+    name: "Button 1"
+    filters:
+      - invert:
+    on_multi_click:
+      - timing:
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 1 - Single Tap"
+      - timing:
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 1 - Double Tap"
+      - timing:
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 1 - Triple Tap"
+      - timing:
+          - ON for at least 500ms
+        then:
+          - logger.log: "Button 1 - Hold"
+
+  - platform: gpio
+    pin:
+      number: GPIO8
+      mode:
+        input: true
+        pullup: true
+    name: "Button 2"
+    filters:
+      - invert:
+    on_multi_click:
+      - timing:
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 2 - Single Tap"
+      - timing:
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 2 - Double Tap"
+      - timing:
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 2 - Triple Tap"
+      - timing:
+          - ON for at least 500ms
+        then:
+          - logger.log: "Button 2 - Hold"
+
+  - platform: gpio
+    pin:
+      number: GPIO10
+      mode:
+        input: true
+        pullup: true
+    name: "Button 3"
+    filters:
+      - invert:
+    on_multi_click:
+      - timing:
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 3 - Single Tap"
+      - timing:
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 3 - Double Tap"
+      - timing:
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at most 350ms
+          - ON for at most 350ms
+          - OFF for at least 350ms
+        then:
+          - logger.log: "Button 3 - Triple Tap"
+      - timing:
+          - ON for at least 500ms
+        then:
+          - logger.log: "Button 3 - Hold"
